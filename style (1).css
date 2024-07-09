@@ -1,0 +1,64 @@
+body {
+  background: url('bgbn.png') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.header {
+  margin-bottom: 20px;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(10, 40px);
+  grid-template-rows: repeat(10, 40px);
+  gap: 2px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.cell {
+  width: 40px;
+  height: 40px;
+  background-color: #87CEEB;
+  border: 1px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.cell.hit {
+  /*background-color: red; */
+  background-image: url("tiro.png");
+}
+
+.cell.miss {
+  /*background-color: grey;*/
+  background-image: url("agua.png");
+  
+}
+
+#message {
+  margin-top: 20px;
+  font-size: 1.2em;
+}
+
+#restartBtn {
+  display: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  cursor: pointer;
+}
