@@ -9,14 +9,35 @@
 </head>
 <body>
     <div class="container">
-        <div class="header">
-            <h1>Joana - 9 Meses!</h1>
-          <h2>Batalha Naval</h2></h2>
-            <div id="timer">Tempo restante: <span id="time">300</span> segundos</div>
+        <div id="startScreen" class="start-screen active">
+                    <h1 align="center">Joana - 9 Meses!</h1>
+            <h2 align="center">Batalha Naval</h2>
+            <p>Bem-vindo a comemoração dos 9 meses!</p>
+            <p>Regras do jogo:</p>
+            <ul>
+                <li>O objetivo é afundar todos os navios do adversário.</li>
+                <li>Você tem 84 segundos para afundar todos os navios.</li>
+                <li>Os navios são:</li>
+                <ul>
+                    <li>1 Hidro-avião (4 quadrados em forma de T)</li>
+                    <li>1 Encouraçado (5 quadrados)</li>
+                    <li>2 Cruzadores (4 quadrados cada)</li>
+                    <li>3 Destroyers (2 quadrados cada)</li>
+                    <li>4 Submarinos (1 quadrado cada)</li>
+                </ul>
+            </ul>
+            <button id="startButton" onclick="startGame()">Iniciar Jogo</button>
         </div>
-        <div class="game-board" id="gameBoard"></div>
-        <div id="message"></div>
-        <button id="restartBtn" onclick="restartGame()">Reiniciar Jogo</button>
+        <div id="gameScreen" class="game-screen">
+            <div class="header">
+                <h1 align="center">Joana - 9 Meses!</h1>
+                <h2 align="center">Batalha Naval</h2>
+                <div id="timer">Tempo restante: <span id="time">84</span> segundos</div>
+            </div>
+            <div class="game-board" id="gameBoard"></div>
+            <div id="message"></div>
+            <button id="restartBtn" onclick="restartGame()">Reiniciar Jogo</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -10,7 +10,6 @@ body {
 }
 
 .container {
-  text-align: center;
   background-color: rgba(255, 255, 255, 0.8);
   padding: 20px;
   border-radius: 10px;
@@ -62,3 +61,13 @@ body {
   font-size: 1em;
   cursor: pointer;
 }
+
+
+.start-screen, .game-screen {
+    display: none;
+}
+
+.start-screen.active, .game-screen.active {
+    display: block;
+}
+

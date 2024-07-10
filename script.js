@@ -3,14 +3,25 @@ let board = [];
 let ships = [];
 let hits = 0;
 let misses = 0;
-let timeLeft = 100;
+let timeLeft = 84;
 let timer;
 
 document.addEventListener('DOMContentLoaded', () => {
+    showStartScreen();
+});
+
+function showStartScreen() {
+    document.getElementById('startScreen').classList.add('active');
+    document.getElementById('gameScreen').classList.remove('active');
+}
+
+function startGame() {
+    document.getElementById('startScreen').classList.remove('active');
+    document.getElementById('gameScreen').classList.add('active');
     createBoard();
     placeShips();
     startTimer();
-});
+}
 
 function createBoard() {
     const gameBoard = document.getElementById('gameBoard');
@@ -200,7 +211,7 @@ function restartGame() {
     ships = [];
     hits = 0;
     misses = 0;
-    timeLeft = 100;
+    timeLeft = 84;
     document.getElementById('gameBoard').innerHTML = '';
     document.getElementById('message').innerText = '';
     document.getElementById('restartBtn').style.display = 'none';
